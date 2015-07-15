@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <css/>
+    <fonts/>
+    <images/>
+    <open-sans-bold.woff/>
+    <open-sans-light.woff/>
+    <open-sans-semibold.woff/>
+    <open-sans-semiboldItalic.woff/>
+    <open-sans.woff/>
+    <clientlibs/>
+    <jcr:content
+        cq:lastModified="{Date}2014-03-17T10:33:00.733-04:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/libs/wcm/core/templates/designpage"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="s"
+        sling:resourceType="wcm/core/components/designer"/>
+    <clientlibs.jquery/>
+    <clientlibs.foundation.base/>
+    <clientlibs.foundation.modern/>
+    <clientlibs.foundation.ie8/>
+    <clientlibs.modern/>
+    <clientlibs.ie8/>
+</jcr:root>
