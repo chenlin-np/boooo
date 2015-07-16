@@ -10,7 +10,7 @@ if ((null==searchAction) && WCMMode.fromRequest(request) == WCMMode.EDIT) {
 	Please edit Search Box Component
 <%
 } else if(searchAction==null){
-	%> Search Not Configured <%
+	%> Search Action Not Configured <%
 } else {
     if(action==null || action.trim().isEmpty()){
 	  action = currentSite.get(searchAction, String.class);
