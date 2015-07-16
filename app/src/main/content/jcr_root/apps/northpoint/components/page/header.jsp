@@ -24,7 +24,6 @@ String designPath = currentDesign == null ? "/" : currentDesign.getPath();
     <!--Logo -->
     <div class="large-6 medium-9 columns">
       <cq:include path="<%= headerPath + "/logo" %>" resourceType="northpoint/components/logo" />
-      <cq:include path="<%= headerPath + "/placeholder" %>" resourceType="northpoint/components/placeholder" />
     </div>
     <div class="large-18 medium-15 hide-for-small columns topMessage">
       <%/*setCssClasses("columns noLeftPadding" , request); */%>
