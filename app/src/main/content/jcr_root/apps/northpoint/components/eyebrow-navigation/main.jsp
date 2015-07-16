@@ -1,14 +1,10 @@
-<%@ page
-    import="java.util.Arrays,
-    java.util.List"%>
+<%@ page import="java.util.Arrays,java.util.List"%>
 <%@include file="/libs/foundation/global.jsp"%>
 <%@include file="/apps/northpoint/components/global.jsp"%>
-
-
 <% 
-
    String currPath = currentPage.getPath();
    String[] links = (String[])(request.getAttribute("links"));
+   if(links!=null){
    for (int i = 0; i < links.length; i++) {
         String[] values = links[i].split("\\|\\|\\|");
         String label = values[0];
@@ -24,5 +20,7 @@
         	<li>
         <% } %>
 		<a href="<%= path %>"<%= newWindow %>><%= label %></a></li>
-    <% } %>
+    <% } 
+   }
+%>
 

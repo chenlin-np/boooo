@@ -1,3 +1,4 @@
+<!--this shows in mobile off-canvas responsive view-->
 <%@ page
     import="java.util.Arrays,java.util.Iterator,
     java.util.regex.Matcher,
