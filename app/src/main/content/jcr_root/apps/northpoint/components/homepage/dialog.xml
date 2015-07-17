@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    height="400"
+    stateful="false"
+    xtype="dialog">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tabs jcr:primaryType="cq:TabPanel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <basic
+                    jcr:primaryType="cq:Widget"
+                    path="/apps/northpoint/components/page/tab_basic.infinity.json"
+                    xtype="cqinclude"/>
+                <advanced
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_advanced.infinity.json"
+                    xtype="cqinclude"/>
+                <image
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_image.infinity.json"
+                    xtype="cqinclude"/>
+                <cloudservices
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_cloudservices.infinity.json"
+                    xtype="cqinclude"/>
+                <blueprint
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_blueprint.infinity.json"
+                    xtype="cqinclude"/>
+                <livecopy
+                    jcr:primaryType="cq:Widget"
+                    path="/libs/foundation/components/page/tab_livecopy.infinity.json"
+                    xtype="cqinclude"/>
+                <northpoint
+                    jcr:primaryType="cq:Widget"
+                    title="Northpoint">
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <events-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Events Path"
+                            name="./eventPath"
+                            xtype="dynamicPathField"/>
+                        <news-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="News Path"
+                            name="./newsPath"
+                            xtype="dynamicPathField"/>
+                        <ads-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Ads Path"
+                            name="./adsPath"
+                            xtype="dynamicPathField"/>
+                        <locations-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Locations Path"
+                            name="./locationsPath"
+                            xtype="dynamicPathField"/>
+                        <events-srch-landing-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Events Landing Page"
+                            name="./eventLanding"
+                            xtype="dynamicPathField"/>
+                        <global-srch-landing-page
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Global Search Landing Page"
+                            name="./globalLanding"
+                            xtype="dynamicPathField"/>
+                        <calendar-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Calendar Path"
+                            name="./calendarPath"
+                            xtype="dynamicPathField"/>
+                        <event-left-nav-root
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Event Left Nav Root"
+                            name="./leftNavRoot"
+                            xtype="dynamicPathField"/>
+                        <google-analytics-id
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Google Analytics ID "
+                            name="./googleAnalyticsId"/>
+                        <tracking
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Put embedded HTML or JavaScript for tracking purposes here."
+                            fieldLabel="Tracking"
+                            name="./footerTracking"/>
+                        <hide-search
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Hide the search box on the top right of the page."
+                            fieldLabel="Hide Search"
+                            name="./hideSearch"
+                            type="checkbox"
+                            xtype="selection"/>
+                        <locale
+                            jcr:primaryType="cq:Widget"
+                            defaultValue="US/Eastern"
+                            fieldDescription="The time zone that the council is in. If there are multiple time zones, use this format: time_zone:label, separated by commas. e.g. US/Eastern:EST,US/Central:CST. The label will be appended when displaying time in events. Available time zones:&lt;br/>US/Eastern&lt;br/>US/Central&lt;br/>US/Mountain&lt;br/>US/Pacific&lt;br/>US/Hawaii&lt;br/>US/Alaska&lt;br/>US/Aleutian&lt;br/>US/Arizona&lt;br/>US/East-Indiana&lt;br/>US/Indiana-Starke&lt;br/>US/Michigan&lt;br/>US/Pacific-New&lt;br/>US/Samoa"
+                            fieldLabel="Time Zone"
+                            name="./timezone"
+                            value="US/Eastern"
+                            xtype="textfield"/>
+                        <header-image-path
+                            jcr:primaryType="cq:Widget"
+                            fieldLabel="Header Image Path"
+                            name="./headerImagePath"
+                            rootPath="/content/dam"
+                            xtype="pathfield"/>
+                    </items>
+                </northpoint>
+            </items>
+        </tabs>
+    </items>
+</jcr:root>
