@@ -25,31 +25,36 @@ String designPath = currentDesign == null ? "/" : currentDesign.getPath();
     <div class="large-6 medium-9 columns">
       <cq:include path="<%= headerPath + "/logo" %>" resourceType="northpoint/components/logo" />
     </div>
+    <!--eyebrow-nav-->
     <div class="large-18 medium-15 hide-for-small columns topMessage">
-      <%/*setCssClasses("columns noLeftPadding" , request); */%>
+        <%setCssClasses("columns noLeftPadding" , request); %>
       <cq:include path="<%= headerPath + "/eyebrow-nav" %>" resourceType="northpoint/components/eyebrow-navigation" />
       <div class="row collapse">
+          <!-- just a placeholder for sign in button -->
         <% setCssClasses("large-17 medium-17 small-24 columns", request); %>
         <cq:include path="<%= headerPath + "/login" %>" resourceType="northpoint/components/login" />
-        <% if(currentSite.get("hideSearch","false").equals("false")){ %>
+          <!--search bar-->
+        <% if(!currentSite.get("hideSearch","").equals("true")){ %>
         <% setCssClasses("large-6 medium-6 small-24 columns searchBar", request); %>
         <cq:include path="<%= headerPath + "/search-box" %>" resourceType="northpoint/components/search-box" />
       <%} %>
       </div>
     </div>
+      <!--small header icons show for mobile view-->
     <div class="show-for-small small-24 columns topMessage alt">
       <div class="row vtk-login collapse">
         <% setCssClasses("small-19 columns", request); %>
         <cq:include path="<%= headerPath + "/login" %>" resourceType="northpoint/components/login" />
         <div class="small-5 columns">
           <div class="small-search-hamburger">
-             <% if(currentSite.get("hideSearch","false").equals("false")){ %>
+             <% if(!currentSite.get("hideSearch","").equals("true")){ %>
               <a class="search-icon"><img src="/etc/designs/northpoint/images/search_white.png" width="21" height="21" alt="search icon"/></a>
-              <% } %>
+             <% } %>
             <a class="right-off-canvas-toggle menu-icon"><img src="/etc/designs/northpoint/images/hamburger.png" width="22" height="28" alt="toggle hamburger side menu icon"/></a>
           </div>
         </div>
       </div>
+      <!-- show when search icon clicked-->
       <div class="row hide srch-box collapse">
         <% setCssClasses("small-22 columns hide srch-box", request); %>
           <cq:include path="<%= headerPath + "/search-box" %>" resourceType="northpoint/components/search-box" />

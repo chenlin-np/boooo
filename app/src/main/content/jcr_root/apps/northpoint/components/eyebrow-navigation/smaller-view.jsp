@@ -1,3 +1,4 @@
+<!--/apps/northpoint/components/global-navigation/smaller-view.jsp-->
 <!--this shows in mobile off-canvas responsive view-->
 <%@ page
     import="java.util.Arrays,java.util.Iterator,
@@ -27,6 +28,7 @@ request.setAttribute("links", link);
 public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_path,StringBuilder menuBuilder,int levelDepth,String ndePath, boolean levelFlag,String currPath, String currTitle) throws RepositoryException{
 	levelDepth++;
 	menuBuilder.append("<ul>");
+    if(iterPage!=null){
 	if(iterPage.hasNext()){
 		while(iterPage.hasNext()){
 			Page page = iterPage.next();
@@ -71,6 +73,7 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
 		}//while
 		menuBuilder.append("");
 	}
+    }
 	menuBuilder.append("</ul>"); 
 	// return menuBuilder;
 }
@@ -79,10 +82,10 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
 <div id="right-canvas-menu-bottom">
   <ul class="side-nav">
  <% 
-	if(link!=null){
-		String[] links = (String[])(request.getAttribute("links"));
+  String[] links = (String[])(request.getAttribute("links"));
+  if(links!=null){
  		for (int i = 0; i < links.length; i++) {
- 			try{
+
 		 		String[] values = links[i].split("\\|\\|\\|");
 				String label = values[0];
 				String menuPath = values.length >= 2 ? values[1] : "";
@@ -115,7 +118,7 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
                     }
                     if((currtPath.indexOf(menuPath)==0) || (currtPath.startsWith(menuPath))){
 					%>
-						<%if((rootPath!=null) && (rootPage.getPath().equals(currtPath))){
+						<%if((rootPath!=null) && (rootPage!=null) && (rootPage.getPath().equals(currtPath))){
 				     		 %><li class="active">
 						<% } else{%>
                            <li>
@@ -139,9 +142,8 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
 					<div><a href="<%= path %>"<%= newWindow %>><%= label %></a></div></li>
 				<% } %>
 				<%
-				}catch(Exception e){%><script>console.log("Something went wrong - Eyebrow Nav");</script><%}
  			}
- 		}%>
+}%>
 		
 	
  </ul>

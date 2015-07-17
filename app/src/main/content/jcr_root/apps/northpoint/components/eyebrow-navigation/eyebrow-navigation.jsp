@@ -5,7 +5,7 @@
 String[] links = properties.get("links", String[].class);
 request.setAttribute("links", links);
 if ((links == null || links.length == 0) && WCMMode.fromRequest(request) == WCMMode.EDIT) {
-%>##### Edit to add eyebrow navigation #####
+%>##### Please Edit Eyebrow Navigation #####
 <%
 } else if (links != null){
 %>
