@@ -15,7 +15,7 @@ if (newCurrentDesign != null) {
 String footerPath = currentPage.getAbsoluteParent(2).getContentResource().getPath() + "/footer";
 String logoPath = currentPage.getAbsoluteParent(2).getContentResource().getPath() + "/header";
 %>
-<!-- web/app/src/main/content/jcr_root/apps/northpoint/components/page/footer.jsp -->
+<!-- /apps/northpoint/components/page/footer.jsp -->
 <div class="hide-for-print">
  <!--footer menu links-->
 	<div id="footer" class="row">

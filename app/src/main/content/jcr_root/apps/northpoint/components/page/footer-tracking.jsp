@@ -8,6 +8,8 @@ if (newCurrentPage != null) {
 %>
 <%@include file="/apps/northpoint/components/global.jsp"%>
 <%@page session="false" %>
+<!--/apps/northpoint/components/page/footer-tracking.jsp-->
+<!--Embedded HTML for tracking-->
 <%
 String tracking = currentSite.get("footerTracking", "");
 if (!tracking.isEmpty()) {
