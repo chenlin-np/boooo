@@ -6,7 +6,7 @@
    String currPath = currentPage.getPath();  
    String[] links = properties.get("links", String[].class);
    request.setAttribute("globalNavigation", links);
-  
+
    int levelDepth = 0;
    String insertAfter="";
    String currTitle = currentPage.getTitle();
@@ -28,7 +28,8 @@
  
 public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_path,StringBuilder menuBuilder,int levelDepth,String ndePath, boolean levelFlag,String eventLeftNavRoot,String currPath, String currTitle, String eventDispUnder) throws RepositoryException{
 	levelDepth++;
-	menuBuilder.append("<ul>");
+    menuBuilder.append("<ul>");
+
 	if(iterPage.hasNext()){
 		while(iterPage.hasNext()){
 			Page page = iterPage.next();
@@ -62,7 +63,8 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
 
 				} else{
 					// CHECKING FOR THE EVENT SPECIAL CASE 
-					if(page.getPath().indexOf(eventLeftNavRoot)==0 && currPath.indexOf(eventDispUnder)==0){
+					if(eventLeftNavRoot!=null && page.getPath().indexOf(eventLeftNavRoot)==0 
+                       && eventDispUnder!=null && currPath.indexOf(eventDispUnder)==0){
 						menuBuilder.append("<li>");
 						menuBuilder.append("<div>");
 						menuBuilder.append("<a href=").append(createHref(page));
@@ -85,10 +87,12 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
 					}
 				}
 			}// end of if
-		}//while
+            }//while 
 		menuBuilder.append("");
-	}
-	menuBuilder.append("</ul>"); 
+        }
+    //menuBuilder.append("<li>inmenuebuilder</li>"); 
+
+    menuBuilder.append("</ul>"); 
 	// return menuBuilder;
 }
 %>
@@ -96,11 +100,11 @@ public void buildMenu(Iterator<Page> iterPage, String rootPath, String gs_us_pat
 <div id="right-canvas-menu"> 
  <ul class="side-nav" style="padding:0px"> 
  
-<% 
+<%
 String slingResourceType = "northpoint/components/placeholder-page";
 if(links!=null){
-for (int i = 0; i < links.length; i++){
-	String[] values = links[i].split("\\|\\|\\|");
+	for (int i = 0; i < links.length; i++){
+        	String[] values = links[i].split("\\|\\|\\|");
 	String label = values[0];
 	String path = values.length >= 2 ? values[1] : "";
 	String menuPath = values.length >= 2 ? values[1] : "";
@@ -117,7 +121,7 @@ for (int i = 0; i < links.length; i++){
 	String startingPoint = "";
 	Iterator <Page> slingResourceIter;
 	contentResourceType = "";
-	try{
+    try{
 		contentResourceType = resource.getResourceResolver().getResource(menuPath+"/jcr:content").getResourceType();
 		if(contentResourceType.equals(slingResourceType)){
 			slingResourceIter = resource.getResourceResolver().getResource(menuPath).adaptTo(Page.class).listChildren();
@@ -125,8 +129,8 @@ for (int i = 0; i < links.length; i++){
 				Page firstChild =  slingResourceIter.next();
 				path = genLink(resourceResolver, firstChild.getPath());
 			}
-		}
-	}catch(Exception e){}
+       	}
+    }catch(Exception e){}
 
 	if(!path.isEmpty() && !path.equalsIgnoreCase("#") && path.indexOf(currentPage.getAbsoluteParent(2).getPath()) == 0) {
 		startingPoint = menuPath.substring(currentPage.getAbsoluteParent(2).getPath().length()+1,menuPath.length());
@@ -143,7 +147,7 @@ for (int i = 0; i < links.length; i++){
 		iterPage = resourceResolver.getResource(gs_us_path+"/"+startingPoint).adaptTo(Page.class).listChildren();
 		if(!currPath.equals(rootPath) && !menuPath.equals('#')){
 			//This if to handle the special case for the events
-			if(currPath.startsWith(eventPath) && eventLeftNavRoot.startsWith(menuPath)){
+			if(eventPath != null && currPath.startsWith(eventPath) && eventLeftNavRoot.startsWith(menuPath)){
 %>
 <li id="sub-active">
 	<div><a href="<%= path %>"><%= sLabel %></a></div>
@@ -154,7 +158,7 @@ for (int i = 0; i < links.length; i++){
 				}
 				buildMenu(iterPage, rootPath, gs_us_path, menuBuilder, levelDepth,"",levelFlag,eventLeftNavRoot, currPath, currTitle, eventDisplUnder);
 %>
-<%=menuBuilder%> 
+    <%=menuBuilder%> 
 <%
 // end main
 
@@ -180,6 +184,7 @@ for (int i = 0; i < links.length; i++){
 %>
 <%=menuBuilder%>   
 <%
+
 			 // This else is to highlight everything when you are on the Home page
 			 } else {
 %>
@@ -190,13 +195,15 @@ for (int i = 0; i < links.length; i++){
 		// Else to handle rest of the menu items 
 		} else {
 %>
-			<div><li><a href="<%= path %>"><%= sLabel %></a></div>
+			<li><div><a href="<%= path %>"><%= sLabel %></a></div>
 <%
 		}
-	}
 %>  
 		</li> 
-<% } 
-}%>
+<%
+	}
+    }
+}
+%>
 	</ul> 
 </div>
