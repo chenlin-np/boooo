@@ -3,6 +3,13 @@
 <%
 	String shortDesc = properties.get("shortdesc","");
 	String linkTitle = properties.get("pathfield","");
+	if (!linkTitle.isEmpty()){
+		//get the uri of the page
+        Resource res = resourceResolver.getResource(linkTitle);
+        if(res!=null && res.adaptTo(Page.class)!=null){
+			linkTitle += ".html";
+        }
+	}
   String title = properties.get("title","");
 %>
   <%= shortDesc %>

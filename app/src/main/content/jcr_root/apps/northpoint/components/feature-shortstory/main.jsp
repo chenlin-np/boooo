@@ -7,8 +7,15 @@
 	String designPath = currentDesign.getPath();
 	String title = properties.get("title","");
 	String linkTitle = properties.get("pathfield","");
+	if (!linkTitle.isEmpty()){
+		//get the uri of the page
+        Resource res = resourceResolver.getResource(linkTitle);
+        if(res!=null && res.adaptTo(Page.class)!=null){
+			linkTitle += ".html";
+        }
+	}
 	String featureIcon = properties.get("./featureiconimage/fileReference", "");
-	
+
 %>
 
 <%if ((title.isEmpty()) && WCMMode.fromRequest(request) == WCMMode.EDIT) {
