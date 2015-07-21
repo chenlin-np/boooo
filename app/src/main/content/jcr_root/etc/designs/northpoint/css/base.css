@@ -74,11 +74,11 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 a {
-  color: #00ae58;
+  color: #22aee4;
 }
 
 a:hover {
-  color: green;
+  color: #356094;
 }
 @media only screen and (min-width: 40.063em) {
   /*    .news-image {
@@ -191,23 +191,23 @@ a:hover {
   }
 }
 a.menu {
-  color: #C1EAD4;
+  color: #ffffff;
   font-size: 1em;
 }
 a:hover.menu {
-  color: #ffffff;
+  color: #C3EBFF;
 }
 a.menuHighlight {
-  color: #FFC057;
+  color: #33CCFF;
 }
 a:hover.menuHighlight {
-  color: #fc3;
+  color: #CC3300;
 }
 .inline-list > li:first-child {
   margin-left: 0;
 }
 .inline-list > li.active>a {
-  color: #ffffff;
+  color: #33CCFF;
 }
 /***********************************/
 /********* PAGE STRUCTURE **********/
@@ -221,7 +221,7 @@ a:hover.menuHighlight {
   line-height: 1;
 }
 #header a:hover {
-  color: #FAA61A;
+  color: #CC3300;
 }
 #header a.signout {
   font-size: 0.875em;
@@ -251,7 +251,7 @@ a:hover.menuHighlight {
 }
 #header .topMessage.alt {
   text-align: left;
-  background-color: #009447;
+  background-color: #000000;
 }
 #header.small-centered {
   text-align: center;
@@ -262,7 +262,7 @@ a:hover.menuHighlight {
 /* HEADER BAR */
 
 #headerBar {
-  background-color: #009447;
+  background-color: #000000;
   margin-top: 20px;
 }
 #headerBar>div {
@@ -289,43 +289,43 @@ a:hover.menuHighlight {
   line-height: 31px;
 }
 /* FOOTER */
-#barter {
-  background-color: #00ae58;
+#footer {
+  background-color: #22aee4;
   padding: 0px;
 }
-#barter a {
+#footer a {
   font-size: 0.875em;
   font-weight: normal;
   margin: 0px 10px 0px 0px;
-  color:#C1EAD4;
+  color:#ffffff;
 }
-#barter a:hover {
-    color: #ffffff;
+#footer a:hover {
+    color: #33CCFF;
 }
-#barter div.barter-navigation {
+#footer div.footer-navigation {
   padding: 10px 0 0px 20px;
 }
-#barter ul {
+#footer ul {
 /*  margin: 0;
   padding: 0;
   line-height: 1;*/
 }
-#barter [class*="block-grid-"] > li {
+#footer [class*="block-grid-"] > li {
   padding-bottom: 0.63em;
 }
-#barter .barter-navigation div:nth-of-type(1) ul {
+#footer .footer-navigation div:nth-of-type(1) ul {
   padding-top: 7px;
 }
-#barter .barter-navigation div:last-child ul {
+#footer .footer-navigation div:last-child ul {
 /*  text-align: right;*/
 }
-#barter li {
+#footer li {
   display: inline;
   list-style: none;
   white-space: nowrap;
 }
-#barter .barter-navigation div:last-child ul a,
-#barter .barter-navigation div:last-child ul a {
+#footer .footer-navigation div:last-child ul a,
+#footer .footer-navigation div:last-child ul a {
   margin: 0;
 }
 [class^="icon-"], [class*=" icon-"] {
@@ -333,11 +333,11 @@ a:hover.menuHighlight {
   font-size: 32px;
 }
 @media only screen and (max-width: 40em) {
-  #barter div.barter-navigation {
-    background-color: #009447;
+  #footer div.footer-navigation {
+    background-color: #22aee4;
 /*    padding:10px 0 0 20px;*/
   }
- #barter .barter-navigation div:nth-of-type(1) ul {
+ #footer .footer-navigation div:nth-of-type(1) ul {
   padding-bottom:25px;
   }
   .logo nav {
@@ -402,7 +402,7 @@ a:hover.menuHighlight {
   margin: 0 0 0 1.4rem;
 }
 .breadcrumbs a.current {
-  color: #00ae58;
+  color: #22aee4;
 }
 /* SIDE NAV */
 
@@ -465,7 +465,7 @@ a:hover.menuHighlight {
   font-weight: 300;
 }
 .home-section h3 {
-  color: #00ae58;
+  color: #22aee4;
   font-size: 1.2em;
 }
 .debug {
@@ -478,7 +478,7 @@ a:hover.menuHighlight {
   color: #ffffff;
 }
 #contactsList tr:first-child {
-  /*background-color: #00ae58;*/
+  /*background-color: #22aee4;*/
 }
 
 table, tr:first-child {

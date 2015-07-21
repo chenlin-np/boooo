@@ -70,10 +70,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 a {
-  color: #00ae58;
+  color: #22aee4;
 }
 a:hover {
-  color: green;
+  color: #356094;
 }
 @media only screen and (min-width:500px and max-width: 620px) {
   .home-section .columns.large-1 {
@@ -194,23 +194,23 @@ padding: 0;
   }
 }
 a.menu {
-  color: #C1EAD4;
+  color: #ffffff;
   font-size: 1em;
 }
 a:hover.menu {
-  color: #ffffff;
+  color: #C3EBFF;
 }
 a.menuHighlight {
-  color: #FFC057;
+  color: #33CCFF;
 }
 a:hover.menuHighlight {
-  color: #fc3;
+  color: #CC3300;
 }
 .inline-list > li:first-child {
   margin-left: 0;
 }
 .inline-list > li.active>a {
-  color: #ffffff;
+  color: #33CCFF;
 }
 /***********************************/
 /********* PAGE STRUCTURE **********/
@@ -218,12 +218,12 @@ a:hover.menuHighlight {
 /* HEADER */
 
 .header-wrapper {
-  background-color: #00ae58;
+  background-color: white;
 }
 #header {
   padding: 15px 0px 0px 0px;
-  background-color: #00ae58;
-  color: #FFFFFF;
+  background-color: white;
+  color: #000000;
 }
 #header span {
   color: #FAA61A;
@@ -232,10 +232,10 @@ a:hover.menuHighlight {
   line-height: 1;
 }
 #header a {
-  color: #FFFFFF;
+  color: #22aee4;
 }
 #header a:hover {
-  color: #FAA61A;
+  color: #CC3300;
 }
 
 #header ul {
@@ -259,7 +259,7 @@ a:hover.menuHighlight {
 }
 #header .topMessage.alt {
   text-align: left;
-  background-color: #009447;
+  background-color: #000000;
 }
 #header.small-centered {
   text-align: center;
@@ -270,7 +270,7 @@ a:hover.menuHighlight {
 /* HEADER BAR */
 
 #headerBar {
-  background-color: #009447;
+  background-color: #000000;
   margin-top: 20px;
 }
 #headerBar>div {
@@ -301,17 +301,17 @@ a:hover.menuHighlight {
 }
 /* FOOTER */
 #footer {
-  background-color: #00ae58;
+  background-color: #22aee4;
   padding: 0px;
 }
 #footer a {
   font-size: 0.875em;
   font-weight: normal;
   margin: 0px 10px 0px 0px;
-  color:#C1EAD4; 
+  color:#ffffff; 
 }
 #footer a:hover {
-    color: #ffffff;
+    color: #33CCFF;
 }
 #footer div.footer-navigation {
   padding: 10px 0 0px 20px;
@@ -344,7 +344,7 @@ a:hover.menuHighlight {
 }
 @media only screen and (max-width: 40em) { 
   #footer div.footer-navigation {
-    background-color: #009447;
+    background-color: #22aee4;
 /*    padding:10px 0 0 20px;*/
   }
    #footer .footer-navigation div:nth-of-type(1) ul {
@@ -356,7 +356,7 @@ a:hover.menuHighlight {
 }
 
 #mobile-nav-footer {
-  background-color: #009447;
+  background-color: #22aee4;
   padding: 0px 0px;
 }
 #mobile-nav-footer a {
@@ -366,7 +366,7 @@ a:hover.menuHighlight {
 }
 /***mobile footer logo**/
 #mobile-footer {
-  background-color: #00ae58;
+  background-color: #22aee4;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -460,7 +460,7 @@ a:hover.menuHighlight {
   margin: 0 0 0 1.4rem;
 }
 .breadcrumbs a.current {
-  color: #00ae58;
+  color: #22aee4;
 }
 /* SIDE NAV */
 
@@ -477,11 +477,10 @@ a:hover.menuHighlight {
   position: relative;
 }
 #main .side-nav > li {
-/*  background: url('/etc/designs/northpoint-usa-green/images/orange-vertical.png') repeat-y 0px 0px;*/
   background-color: #F1F1EF;
 }
 #main .side-nav > li.active {
-/*  background: url('/etc/designs/northpoint-usa-green/images/orange-yellow-vertical.png') repeat-y 0px 0px;*/
+/*  background: url('/etc/designs/northpoint-default/images/orange-yellow-vertical.png') repeat-y 0px 0px;*/
   background-color: #f7f7f6;
 }
 #main .side-nav li:before {
@@ -581,7 +580,7 @@ a:hover.menuHighlight {
   font-weight: 300;
 }
 .home-section h3 {
-  color: #00ae58;
+  color: #22aee4;
   font-size: 1.2em;
 }
 .debug {
@@ -652,7 +651,6 @@ input#date {
   padding-right: 10px;
 }
 #advSearch {
-  background-image: url("/etc/designs/northpoint-usa-green/images/search.png");
   background-position: right center;
   background-repeat: no-repeat;
   padding: 10px;
@@ -812,14 +810,14 @@ td.fc-header-left {
   font-weight: normal;
 }
 #right-canvas-menu .side-nav>li {
-  background: url('/etc/designs/northpoint-usa-green/images/orange-vertical.png') repeat-y 0px 0px;
+  background: url('/etc/designs/northpoint-default/images/orange-vertical.png') repeat-y 0px 0px;
 }
 #right-canvas-menu .side-nav>li.active {
-  background: url('/etc/designs/northpoint-usa-green/images/orange-yellow-vertical.png') repeat-y 0px 0px;
+  background: url('/etc/designs/northpoint-default/images/orange-yellow-vertical.png') repeat-y 0px 0px;
   padding: 0px 0px 0px 10px;
 }
 #right-canvas-menu .side-nav>li#sub-active {
-  background: url('/etc/designs/northpoint-usa-green/images/orange-yellow-vertical.png') repeat-y 0px 0px;
+  background: url('/etc/designs/northpoint-default/images/orange-yellow-vertical.png') repeat-y 0px 0px;
 }
 #right-canvas-menu .side-nav ul#submenu {
   padding: 0px;
@@ -860,13 +858,13 @@ td.fc-header-left {
   font-family: "JollyFont";
   position: absolute;
   content: "\e66c";
-  color: rgb(0, 174, 88);
+  color: #356094;
   top: 0px;
   right: 0%;
   font-size: 1.3em;
 }
 #headerBar ul li.active {
-  background: url('/etc/designs/northpoint-usa-green/images/white-up-arrow.png') no-repeat 60px 0px;
+  background: url('/etc/designs/northpoint-default/images/white-up-arrow.png') no-repeat 60px 0px;
   background-position: center bottom;
 }
 #header div.login {
@@ -906,12 +904,12 @@ td.fc-header-left {
 
 /*#footer div.footer-navigation {
     padding:10px 0 10px 20px;
-    background: url('/etc/designs/northpoint-usa-green/images/small-trefoil.png') no-repeat;
+    background: url('/etc/designs/northpoint-default/images/small-trefoil.png') no-repeat;
     background-position:center;
 
 }*/
 /*#leftContent li.active ul li.active{
-    background: url('/etc/designs/northpoint-usa-green/images/small-green-arrow-right.png') no-repeat  0px 0px;
+    background: url('/etc/designs/northpoint-default/images/small-green-arrow-right.png') no-repeat  0px 0px;
     background-position:right 9px;  
 }*/
 
@@ -950,7 +948,7 @@ td.fc-header-left {
   font-size: 1.0rem;
 }
 #calendar a {
-  background: url('/etc/designs/northpoint-usa-green/images/calendar-icon.png') no-repeat 0px 0px;
+  background: url('/etc/designs/northpoint-default/images/calendar-icon.png') no-repeat 0px 0px;
   background-position: left center;
   padding-left: 25px;
 }
@@ -1028,7 +1026,7 @@ div.textimage.nowrap div.text p {
   padding: 0;
 }
 .emailicon {
-  background: url('/etc/designs/northpoint-usa-green/images/envelope.png') no-repeat;
+  background: url('/etc/designs/northpoint-default/images/envelope.png') no-repeat;
   width: 20px;
   height: 14px;
 }
@@ -1050,12 +1048,12 @@ input.searchField {
   overflow: hidden;
 }
 .option-top {
-  background: url('/etc/designs/northpoint-usa-green/images/option-top-green-arrow.png') no-repeat;
+  background: url('/etc/designs/northpoint-default/images/option-top-green-arrow.png') no-repeat;
   width: 130px;
   height: 20px;
 }
 .option-down {
-  background: url('/etc/designs/northpoint-usa-green/images/option-down-green-arrow.png') no-repeat;
+  background: url('/etc/designs/northpoint-default/images/option-down-green-arrow.png') no-repeat;
   width: 130px;
   height: 20px;
 }
@@ -1107,7 +1105,7 @@ div.wrapper .row:nth-child(2) {
   -moz-appearance: window;
   text-indent: 0.01px;
   text-overflow: '';
-  background: url('/etc/designs/northpoint-usa-green/images/select-dropdown-arrow.png') no-repeat right center;
+  background: url('/etc/designs/northpoint-default/images/select-dropdown-arrow.png') no-repeat right center;
   /*background-repeat: no-repeat;
     background-position: right center;
     */
@@ -1123,7 +1121,7 @@ div.wrapper .row:nth-child(2) {
 @-moz-document url-prefix() {
   .dropdown-moz {
     -webkit-appearance: none;
-    background: #ffffff url('/etc/designs/northpoint-usa-green/images/select-dropdown-arrow.png') no-repeat right center;
+    background: #ffffff url('/etc/designs/northpoint-default/images/select-dropdown-arrow.png') no-repeat right center;
     border: 1px solid #cccccc;
     top: 0px;
   }
@@ -1139,13 +1137,13 @@ div.wrapper .row:nth-child(2) {
   color: gray;
 }
 .white-arrow-down {
-  background: url('/etc/designs/northpoint-usa-green/images/white-arrow-down.png') no-repeat;
+  background: url('/etc/designs/northpoint-default/images/white-arrow-down.png') no-repeat;
   width: 20px;
   height: 20px;
   background-position: center bottom;
 }
 .white-arrow-up {
-  background: url('/etc/designs/northpoint-usa-green/images/white-arrow-up.png') no-repeat;
+  background: url('/etc/designs/northpoint-default/images/white-arrow-up.png') no-repeat;
   width: 20px;
   height: 20px;
   background-position: center bottom;
@@ -1273,7 +1271,7 @@ form#contact-us textarea {
   padding-left: 140px;
 }
 .horizontalRule {
-  background: url('/etc/designs/northpoint-usa-green/images/horizontal-stripe.png') repeat-x center center;
+  background: url('/etc/designs/northpoint-default/images/horizontal-stripe.png') repeat-x center center;
 }
 .checkbox-grid span {
   display: block;
@@ -1297,7 +1295,7 @@ div#eventListWrapper {
   margin-top: 2em;
 }
 .styled-select select {
-  background: url('/etc/designs/northpoint-usa-green/images/select-dropdown-arrow.png') no-repeat 116px;
+  background: url('/etc/designs/northpoint-default/images/select-dropdown-arrow.png') no-repeat 116px;
   border: medium none;
   height: 23px;
   padding: 5px 0 5px 5px;

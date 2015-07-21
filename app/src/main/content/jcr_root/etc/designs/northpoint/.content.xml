@@ -15,7 +15,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/libs/wcm/core/templates/designpage"
         jcr:primaryType="cq:PageContent"
-        jcr:title="s"
+        jcr:title="NP basics"
         sling:resourceType="wcm/core/components/designer"/>
     <clientlibs.jquery/>
     <clientlibs.foundation.base/>
