@@ -11,8 +11,7 @@
     <filter root="/etc/data-importers"/>
     <filter root="/etc/data-import"/>
     <filter root="/etc/designs/northpoint"/>
-    <filter root="/etc/designs/northpoint-green"/>
-    <filter root="/etc/designs/default"/>
+    <filter root="/etc/designs/northpoint-default"/>
     <filter root="/etc/scaffolding/northpoint-prototype"/>
     <filter root="/etc/scaffolding/northpoint-dxp"/>
     <filter root="/etc/workflow/models/email-workflow"/>

@@ -1,16 +1,11 @@
 <%@include file="/libs/foundation/global.jsp"%>
+<%@include file="/apps/northpoint/components/global.jsp"%>
+
 <!-- apps/northpoint/components/feature-shortstory/text.jsp -->
 <%
 	String shortDesc = properties.get("shortdesc","");
-	String linkTitle = properties.get("pathfield","");
-	if (!linkTitle.isEmpty()){
-		//get the uri of the page
-        Resource res = resourceResolver.getResource(linkTitle);
-        if(res!=null && res.adaptTo(Page.class)!=null){
-			linkTitle += ".html";
-        }
-	}
-  String title = properties.get("title","");
+	String link = genLink(resourceResolver,properties.get("pathfield",""));
+
 %>
-  <%= shortDesc %>
-  <a href="<%= linkTitle %>">Continue &gt;</a>
+<%= shortDesc %>
+<a href="<%= link %>">Continue &gt;</a>

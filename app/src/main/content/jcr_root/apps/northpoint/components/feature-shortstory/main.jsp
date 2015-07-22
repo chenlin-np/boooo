@@ -1,19 +1,14 @@
 <%@include file="/libs/foundation/global.jsp"%>
 <%@page import="com.day.cq.wcm.api.WCMMode" %>
+<%@include file="/apps/northpoint/components/global.jsp"%>
 
 
 <!-- apps/northpoint/components/feature-shortstory/main.jsp -->
 <%
 	String designPath = currentDesign.getPath();
 	String title = properties.get("title","");
-	String linkTitle = properties.get("pathfield","");
-	if (!linkTitle.isEmpty()){
-		//get the uri of the page
-        Resource res = resourceResolver.getResource(linkTitle);
-        if(res!=null && res.adaptTo(Page.class)!=null){
-			linkTitle += ".html";
-        }
-	}
+	//href of the title
+	String linkTitle = genLink(resourceResolver,properties.get("pathfield",""));
 	String featureIcon = properties.get("./featureiconimage/fileReference", "");
 
 %>
