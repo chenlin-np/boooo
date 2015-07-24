@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Create a Northpoint content page that has three columns with a left side menu, paragraph system in the middle and advisement at the right side."
+    jcr:primaryType="cq:Template"
+    jcr:title="NP Basics Three Column Page"
+    allowedPaths="[/content(/.*)?]"
+    ranking="{Long}10">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="northpoint/components/three-column-page"/>
+</jcr:root>

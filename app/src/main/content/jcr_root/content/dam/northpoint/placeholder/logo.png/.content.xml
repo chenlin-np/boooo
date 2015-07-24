@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:tiff="http://ns.adobe.com/tiff/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dam="http://www.day.com/dam/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:mix="http://www.jcp.org/jcr/mix/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:isCheckedOut="{Boolean}true"
+    jcr:mixinTypes="[mix:versionable]"
+    jcr:primaryType="dam:Asset"
+    jcr:uuid="fb34b867-3b26-4bbf-bf1f-5689cc708328">
+    <jcr:content
+        cq:name="logo.png"
+        cq:parentPath="/content/dam/northpoint/placeholder"
+        jcr:lastModified="{Date}2015-07-15T18:02:10.198-04:00"
+        jcr:lastModifiedBy="admin"
+        jcr:primaryType="dam:AssetContent"
+        restored="{Boolean}true">
+        <metadata
+            dam:Bitsperpixel="{Long}8"
+            dam:extracted="{Date}2015-07-15T17:11:16.257-04:00"
+            dam:Fileformat="PNG"
+            dam:MIMEtype="image/png"
+            dam:Numberofimages="{Long}1"
+            dam:Numberoftextualcomments="{Long}0"
+            dam:Physicalheightindpi="{Long}-1"
+            dam:Physicalheightininches="{Double}-1.0"
+            dam:Physicalwidthindpi="{Long}-1"
+            dam:Physicalwidthininches="{Double}-1.0"
+            dam:Progressive="no"
+            dam:sha1="137e8aea25c4cb5d51ee13ca7e2a630e01e95c1d"
+            dam:size="{Long}4149"
+            dc:format="image/png"
+            dc:modified="{Date}2015-07-15T17:58:02.991-04:00"
+            jcr:lastModified="{Date}2015-07-15T18:02:10.197-04:00"
+            jcr:lastModifiedBy="admin"
+            jcr:mixinTypes="[cq:Taggable]"
+            jcr:primaryType="nt:unstructured"
+            tiff:ImageLength="{Long}125"
+            tiff:ImageWidth="{Long}344"/>
+        <related jcr:primaryType="nt:unstructured"/>
+        <renditions/>
+    </jcr:content>
+</jcr:root>
