@@ -32,7 +32,6 @@
 }
 #main .side-nav li.active.current {
   background-color: #00ae58;
-  /*background: url('/etc/designs/northpoint/images/orange_arrow.png') no-repeat 185px 6px #00ae58;*/
 }
 #main .side-nav li.active.current > div:after {
   border: solid 7px;
@@ -42,7 +41,6 @@
   right: 0;
   top: 50%;
   margin-top: -7px;
-  /*  background: url('/etc/designs/northpoint-usa-green/images/small-green-arrow-right.png') no-repeat 185px 6px #f1f1ef;*/
 }
 #main .side-nav li.active.current > ul > li {
   background: #ffffff;

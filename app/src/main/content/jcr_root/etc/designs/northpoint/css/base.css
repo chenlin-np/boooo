@@ -537,7 +537,6 @@ input#date {
   padding-right: 10px;
 }
 #advSearch {
-  /*background-image: url("/etc/designs/northpoint-usa-green/images/search.png");*/
   background-position: right center;
   background-repeat: no-repeat;
   padding: 10px;
@@ -724,7 +723,7 @@ td.fc-header-left {
     width: 100%;
 }
 #headerBar ul li.active {
-    background: url('/etc/designs/northpoint-usa-green/images/white-up-arrow.png') no-repeat 60px 0px;
+    background: url('/etc/designs/northpoint/images/white-up-arrow.png') no-repeat 60px 0px;
     background-position: center bottom;
 }
 #header div.login {

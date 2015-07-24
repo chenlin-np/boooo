@@ -32,11 +32,13 @@ else {
 }
 
 Page adRoot = resourceResolver.resolve(rootPath).adaptTo(Page.class);
-if (adRoot != null) {
+if (adRoot != null && adRoot.getProperties().get("sling:resourceType",String.class).endsWith("/components/ad-list-page")) {
 	// For now, there is only one strategy, FIFO, which is the default;
 	String loadPath = rootPath + "." + adCount + ".html";
 	%>
 	<script type="text/javascript">
 		$('.advertisement').load('<%= loadPath %>');
 	</script>
-<% } %>
+<% } else{
+%>Path needs to point to an Ad List Page<%
+}%>
