@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    warnIfModified="{Boolean}false"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <grid
+                jcr:primaryType="cq:Widget"
+                title="Grid System"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <large-blocks
+                        jcr:primaryType="cq:Widget"
+                        allowDecimals="{Boolean}false"
+                        allowNegative="{Boolean}false"
+                        fieldDescription="How many blocks in a row on large screen view. (default: 4)"
+                        fieldLabel="Blocks (Large)"
+                        name="./largeBlocks"
+                        value="4"
+                        xtype="numberfield"/>
+                    <medium-blocks
+                        jcr:primaryType="cq:Widget"
+                        allowDecimals="{Boolean}false"
+                        allowNegative="{Boolean}false"
+                        fieldDescription="How many blocks in a row on medium screen view. (default: 2)"
+                        fieldLabel="Blocks (Medium)"
+                        name="./mediumBlocks"
+                        value="2"
+                        xtype="numberfield"/>
+                    <small-blocks
+                        jcr:primaryType="cq:Widget"
+                        allowDecimals="{Boolean}false"
+                        allowNegative="{Boolean}false"
+                        fieldDescription="How many blocks in a row on small screen view. (default: 1)"
+                        fieldLabel="Blocks (Small)"
+                        name="./smallBlocks"
+                        value="1"
+                        xtype="numberfield"/>
+                </items>
+            </grid>
+            <styles
+                jcr:primaryType="cq:Widget"
+                title="Styles"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <gridStyle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter css tags separated by spaces ie &quot;padding:0px color:#FFFFFF&quot;. Tags for this field will affect the entire grid."
+                        fieldLabel="Grid Css"
+                        name="./gridStyle"
+                        xtype="textfield"/>
+                    <itemStyle
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Enter css tags separated by spaces ie &quot;padding:0px color:#FFFFFF&quot;. Tags for this field will affect each individual item within the grid."
+                        fieldLabel="Individual Item Css"
+                        name="./itemStyle"
+                        xtype="textfield"/>
+                    <cssClasses
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Css classes will be added to all children components"
+                        fieldLabel="CSS Classes"
+                        name="./cssClasses"
+                        xtype="textfield"/>
+                </items>
+            </styles>
+        </items>
+    </items>
+</jcr:root>
