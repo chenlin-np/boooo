@@ -8,20 +8,18 @@ org.apache.sling.api.resource.ValueMap" %>
 <cq:defineObjects/>
 <%
 String rootPath = properties.get("path", "");
+
 if (rootPath.isEmpty()) {
     rootPath = currentSite.get("adsPath", "");
 }
-if (rootPath.isEmpty()) {
-    rootPath = currentPage.getAbsoluteParent(2).getPath() + "/ads";
-}
-%>
-<%
 if (rootPath.isEmpty()) {
     if (WCMMode.fromRequest(request) == WCMMode.EDIT) {
 		%>Advertisement: path not configured.<%
     }
     return;
 }
+%>
+<%
 //Setting adCount
 String tempAdCount = currentDesign.getStyle("three-column-page/advertisement").get("adCount", "");
 int adCount;

@@ -13,6 +13,7 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <adCount
                         jcr:primaryType="cq:Widget"
+                        fieldDescription="(default: 2)"
                         fieldLabel="Number of Ads"
                         name="./adCount"
                         xtype="numberfield"/>

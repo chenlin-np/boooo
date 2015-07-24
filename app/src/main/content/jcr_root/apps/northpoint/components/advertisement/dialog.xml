@@ -9,10 +9,12 @@
         <items jcr:primaryType="cq:WidgetCollection">
             <tab1
                 jcr:primaryType="cq:Panel"
-                title="Path">
+                title="Path"
+                xtype="panel">
                 <items jcr:primaryType="cq:WidgetCollection">
                     <path
                         jcr:primaryType="cq:Widget"
+                        fieldDescription="Path to ad-pages. (To config global ads, go to Homepage properties and set Ad Path instead)"
                         fieldLabel="Path to Ads"
                         name="./path"
                         xtype="pathfield"/>
