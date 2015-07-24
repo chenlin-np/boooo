@@ -14,7 +14,7 @@
                 <items jcr:primaryType="cq:WidgetCollection">
                     <path
                         jcr:primaryType="cq:Widget"
-                        fieldDescription="Path to ad-pages. (To config global ads, go to Homepage properties and set Ad Path instead)"
+                        fieldDescription="Path to ad-pages. Must point to an NP Basics Ad List Page. (To config global ads, go to Homepage properties instead.)"
                         fieldLabel="Path to Ads"
                         name="./path"
                         xtype="pathfield"/>
