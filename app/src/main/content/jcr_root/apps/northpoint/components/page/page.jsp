@@ -26,7 +26,6 @@
 %><%@taglib prefix="cq" uri="http://www.day.com/taglibs/cq/1.0" %><%
 %><!--/apps/northpoint/components/page/page.jsp-->
 <cq:defineObjects/><%
-
     // read the redirect target from the 'page properties' and perform the
     // redirect if WCM is disabled.
     String location = properties.get("redirectTarget", "");
@@ -57,7 +56,8 @@
         //null check added to the foundation page
         if(currentDesign.getDoctype(currentStyle)!=null){
             currentDesign.getDoctype(currentStyle).toRequest(request);
-        }else if(WCMMode.fromRequest(request) == WCMMode.EDIT){
+        }else if(WCMMode.fromRequest(request) == WCMMode.EDIT && currentPage.getAbsoluteParent(0)!=null ){
+            //show config message on content pages.
             %> <p>(cq:designPath is not configured)</p><%
         }
     }
