@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    activeTab="{Long}0"
+    helpPath="en/cq/current/wcm/default_components.html#Image"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <tab1
+            jcr:primaryType="cq:Widget"
+            title="Use Scaffolding"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <label
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Hint"
+                    html="&lt;p>&lt;b>Use the scaffolding to edit event&lt;/b>&lt;/p>&#xa;&lt;p>Go to the sidekick and click the &lt;b>fourth&lt;/b> button on the bottom to edit.&lt;/p>"
+                    xtype="label"/>
+            </items>
+        </tab1>
+    </items>
+</jcr:root>
