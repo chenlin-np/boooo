@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        dialogPath="/apps/northpoint/wcm/scaffolding/dialogs/event/dialog"
+        cq:lastModified="{Date}2009-04-01T12:27:34.647+02:00"
+        cq:lastModifiedBy="admin"
+        cq:targetPath="/content/northpoint-prototype/en/events-repository"
+        cq:targetTemplate="/apps/northpoint/templates/event-page"
+        jcr:description="s Events Scaffolding"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Events"
+        sling:resourceType="northpoint/wcm/components/event-scaffolding">
+    </jcr:content>
+</jcr:root>
