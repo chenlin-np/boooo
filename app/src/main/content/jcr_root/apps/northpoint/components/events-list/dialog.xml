@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <static
+                    jcr:primaryType="cq:Widget"
+                    title="Select Events"
+                    xtype="panel">
+                    <listeners jcr:primaryType="nt:unstructured"/>
+                    <items jcr:primaryType="cq:WidgetCollection">
+                        <pages
+                            jcr:primaryType="cq:Widget"
+                            fieldDescription="Click the '+' to add a new page"
+                            fieldLabel="Pages"
+                            name="./pages"
+                            xtype="multifield">
+                            <fieldConfig
+                                jcr:primaryType="cq:Widget"
+                                relativePath="/events"
+                                width="155"
+                                xtype="pathfield"/>
+                        </pages>
+                    </items>
+                </static>
+            </items>
+            <tab1
+                jcr:primaryType="cq:Panel"
+                title="Feature Events Mode">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <featuretitle
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Feature Title"
+                        name="./featuretitle"
+                        xtype="textfield"/>
+                    <eventcounts
+                        jcr:primaryType="cq:Widget"
+                        allowNegative="{Boolean}false"
+                        fieldDescription="(Please provide only numbers.)"
+                        fieldLabel="Number of Events"
+                        maxValue="{Long}100"
+                        name="./eventcount"
+                        xtype="numberfield"/>
+                    <url
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="(Provide the URL for the Title to be linked too)"
+                        fieldLabel="Url"
+                        name="./urltolink"
+                        xtype="pathfield"/>
+                    <filter
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="end"
+                        fieldDescription="Choose to filter the events by starting or ending date."
+                        fieldLabel="Filtered By"
+                        name="./filter"
+                        value="end"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <start
+                                jcr:primaryType="nt:unstructured"
+                                text="Starting Date: displays events that start after current date"
+                                value="start"/>
+                            <end
+                                jcr:primaryType="nt:unstructured"
+                                text="Ending Date: displays events that end after current date"
+                                value="end"/>
+                        </options>
+                    </filter>
+                </items>
+            </tab1>
+            <image
+                jcr:primaryType="cq:Widget"
+                cropParameter="./imageCrop"
+                ddGroups="[media]"
+                fileNameParameter="./fileName"
+                fileReferenceParameter="./fileReference"
+                mapParameter="./imageMap"
+                name="./file"
+                requestSuffix=".img.png"
+                rotateParameter="./imageRotate"
+                title="Image"
+                xtype="html5smartimage"/>
+            <daysofevents
+                jcr:primaryType="cq:Panel"
+                title="Days out Events Mode">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <days-of-events
+                        jcr:primaryType="cq:Widget"
+                        defaultValue="0"
+                        fieldDescription="(Number of days out events to be displayed from current date.)"
+                        fieldLabel="Days out events from today"
+                        imageLabel="Image"
+                        name="./daysofevents"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <zero
+                                jcr:primaryType="nt:unstructured"
+                                text="0"
+                                value="0"/>
+                            <one
+                                jcr:primaryType="nt:unstructured"
+                                text="5"
+                                value="5"/>
+                            <two
+                                jcr:primaryType="nt:unstructured"
+                                text="10"
+                                value="10"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="15"
+                                value="15"/>
+                            <four
+                                jcr:primaryType="nt:unstructured"
+                                text="20"
+                                value="20"/>
+                            <five
+                                jcr:primaryType="nt:unstructured"
+                                text="25"
+                                value="25"/>
+                            <six
+                                jcr:primaryType="nt:unstructured"
+                                text="30"
+                                value="30"/>
+                            <seven
+                                jcr:primaryType="nt:unstructured"
+                                text="35"
+                                value="35"/>
+                            <eight
+                                jcr:primaryType="nt:unstructured"
+                                text="40"
+                                value="40"/>
+                            <nine
+                                jcr:primaryType="nt:unstructured"
+                                text="45"
+                                value="45"/>
+                            <ten
+                                jcr:primaryType="nt:unstructured"
+                                text="50"
+                                value="50"/>
+                            <eleven
+                                jcr:primaryType="nt:unstructured"
+                                text="55"
+                                value="55"/>
+                            <twelve
+                                jcr:primaryType="nt:unstructured"
+                                text="60"
+                                value="60"/>
+                        </options>
+                    </days-of-events>
+                </items>
+            </daysofevents>
+        </items>
+    </items>
+</jcr:root>
