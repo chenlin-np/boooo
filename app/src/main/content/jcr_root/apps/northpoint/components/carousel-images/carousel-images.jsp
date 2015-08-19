@@ -51,26 +51,19 @@ else if(imageNode!=null){
   while(images.hasNext()){  
 	  
 	Node imgNode = images.next().adaptTo(Node.class);
-	String width = "960";
-	String height="";
-	
-	if(imgNode.hasProperty("width")){
-		width = imgNode.getProperty("width").getString();
-	}
-	if(imgNode.hasProperty("height")){
-		width = imgNode.getProperty("height").getString();
-	}
+
     if(imgNode.getProperty("imagesize").getString().equalsIgnoreCase("regular")){
 		if(imgNode.hasProperty("fileReference")){
+            imgNode.setProperty("alt", alt);
 			largePath = imgNode.getProperty("fileReference").getString();
 			isplaceholderflag = true;
 			%>
 			<div>
 				<a href="<%=linkUrl%>">
 					<%if(spplacement!=null && spplacement.equalsIgnoreCase("right")){ %> 
-						<%= displayRendition(resourceResolver, largePath, "cq5dam.web.665.365", "hide-for-small hide-for-medium", BREAKPOINT_MAX_LARGE) %>
+						<%= displayRendition(resourceResolver, imgNode.getPath(), "cq5dam.web.665.365", "hide-for-small hide-for-medium", BREAKPOINT_MAX_LARGE) %>
 					<%}else{%>
-						<%= displayRendition(resourceResolver, largePath, "cq5dam.web.960.420", "hide-for-small hide-for-medium", BREAKPOINT_MAX_LARGE) %>
+						<%= displayRendition(resourceResolver, imgNode.getPath(), "cq5dam.web.960.420", "hide-for-small hide-for-medium", BREAKPOINT_MAX_LARGE) %>
 					<%}%>
 				 </a>
 			</div> 
@@ -82,11 +75,12 @@ else if(imageNode!=null){
 	}
 	if(imgNode.getProperty("imagesize").getString().equalsIgnoreCase("medium")){
 		if(imgNode.hasProperty("fileReference")){
+            imgNode.setProperty("alt", alt);
 			mediumPath = imgNode.getProperty("fileReference").getString();
          %>  
 			<div>    
 				<a href="<%=linkUrl%>"> 
-					<%= displayRendition(resourceResolver, mediumPath, "cq5dam.web.720.420", "show-for-medium", BREAKPOINT_MAX_MEDIUM) %>
+					<%= displayRendition(resourceResolver, imgNode.getPath(), "cq5dam.web.720.420", "show-for-medium", BREAKPOINT_MAX_MEDIUM) %>
 				</a>  
 			</div> 
 	<%
@@ -100,11 +94,11 @@ else if(imageNode!=null){
 	if(imgNode.getProperty("imagesize").getString().equalsIgnoreCase("small")){
 		if(imgNode.hasProperty("fileReference")){
 			smallPath = imgNode.getProperty("fileReference").getString();
-        
+			imgNode.setProperty("alt", alt);
 		%>  
 			 <div>
 				<a href="<%=linkUrl%>">  
-					<%= displayRendition(resourceResolver, smallPath, "cq5dam.web.320.400", "show-for-small", BREAKPOINT_MAX_SMALL) %>
+					<%= displayRendition(resourceResolver, imgNode.getPath(), "cq5dam.web.320.400", "show-for-small", BREAKPOINT_MAX_SMALL) %>
 				</a>
 			</div>  
 		<%  

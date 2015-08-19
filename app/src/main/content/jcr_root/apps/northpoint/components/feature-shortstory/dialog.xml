@@ -61,19 +61,19 @@
                 <title
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Image Title"
-                    name="./imgtitle"
+                    name="./image/jcr:title"
                     xtype="textfield"/>
                 <alt
                     jcr:primaryType="cq:Widget"
                     fieldDescription="(leave empty to use the title defined above)"
                     fieldLabel="Alt Text"
-                    name="./alt"
+                    name="./image/alt"
                     xtype="textfield"/>
                 <size
                     jcr:primaryType="cq:Widget"
                     fieldLabel="Size"
-                    heightParameter="./height"
-                    widthParameter="./width"
+                    heightParameter="./image/height"
+                    widthParameter="./image/width"
                     xtype="sizefield"/>
                 <resType
                     jcr:primaryType="cq:Widget"
