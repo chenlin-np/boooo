@@ -1,5 +1,7 @@
 <%@include file="/libs/foundation/global.jsp"%>
 <%@include file="/apps/northpoint/components/global.jsp" %>
+<%@page import="com.day.cq.wcm.api.WCMMode" %>
+
 <%!
 	int MAX_TITLE = 58;
 	public String trimTitle(String str) {
@@ -21,20 +23,24 @@
 	String title="";
 
 	if(resrc.isResourceType("northpoint/components/event-page") || resrc.isResourceType("northpoint/components/news-page")){
-		String breadcrumb = currentSite.get("leftNavRoot", String.class);;
-		if(resrc.isResourceType("northpoint/components/news-page"))
+		String breadcrumb = currentSite.get("leftNavRoot", String.class);
+        if(resrc.isResourceType("northpoint/components/news-page")){
 			breadcrumb = currentSite.get("newsPath",String.class);
+        }
 		String absolutePath = currentPage.getAbsoluteParent(2).getPath();
-		String[] actualPaths = breadcrumb.substring(absolutePath.length()+1, breadcrumb.length()).split("/");
-
-		for(String str: actualPaths) {
-		absolutePath += "/"+str;
-		Page parentNode = resource.getResourceResolver().getResource(absolutePath).adaptTo(Page.class);
-		title = parentNode.getTitle();
-%>
-	<%= xssAPI.filterHTML(delim) %><a href="<%= xssAPI.getValidHref(parentNode.getPath()+".html") %>"><%= xssAPI.encodeForHTML(title) %></a>
-<%
-		}
+        if(breadcrumb!=null && breadcrumb.length()>= absolutePath.length()+1){
+            String[] actualPaths = breadcrumb.substring(absolutePath.length()+1, breadcrumb.length()).split("/");
+            if(actualPaths !=null){
+                for(String str: actualPaths) {
+                absolutePath += "/"+str;
+                Page parentNode = resource.getResourceResolver().getResource(absolutePath).adaptTo(Page.class);
+                title = parentNode.getTitle();
+        %>
+            <%= xssAPI.filterHTML(delim) %><a href="<%= xssAPI.getValidHref(parentNode.getPath()+".html") %>"><%= xssAPI.encodeForHTML(title) %></a>
+        <%
+                }
+            }
+        }
 		String displayTitle = trimTitle(currentPage.getTitle());
 %>
 	<%= xssAPI.filterHTML(delim) %><span class="breadcrumbCurrent"><%= xssAPI.encodeForHTML(displayTitle) %></span>

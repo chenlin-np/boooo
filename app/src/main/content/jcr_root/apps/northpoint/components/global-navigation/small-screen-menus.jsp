@@ -147,7 +147,7 @@ if(links!=null){
 		iterPage = resourceResolver.getResource(gs_us_path+"/"+startingPoint).adaptTo(Page.class).listChildren();
 		if(!currPath.equals(rootPath) && !menuPath.equals('#')){
 			//This if to handle the special case for the events
-			if(eventPath != null && currPath.startsWith(eventPath) && eventLeftNavRoot.startsWith(menuPath)){
+			if(eventPath != null && currPath.startsWith(eventPath) && eventLeftNavRoot!=null && eventLeftNavRoot.startsWith(menuPath)){
 %>
 <li id="sub-active">
 	<div><a href="<%= path %>"><%= sLabel %></a></div>

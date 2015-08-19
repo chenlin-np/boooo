@@ -43,7 +43,7 @@ for (int i = 0; i < links.length; i++) {
 
 	String activeStatus = "";
 	if(!currPath.equals(rootPath) && (
-		(eventPath!=null && currPath.startsWith(eventPath) && eventLeftNavRoot.startsWith(menuPath))
+		(eventPath!=null && currPath.startsWith(eventPath) && eventLeftNavRoot!=null && eventLeftNavRoot.startsWith(menuPath))
 		|| menuPath.indexOf(currPath) == 0
 		|| currPath.startsWith(menuPath))
 	) {
