@@ -5,13 +5,13 @@
     <!-- P A R E N T P R O J E C T D E S C R I P T I O N -->
     <!-- ====================================================================== -->
 
-    <groupId>com.northpoint.basics</groupId>
-    <artifactId>northpoint</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.northpointdigital.basics</groupId>
+    <artifactId>northpoint-aem-basics</artifactId>
+    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>Northpoint Basics - Reactor Project</name>
-    <description>Maven Multimodule project for Northpoint Basics.</description>
+    <name>NorthPoint AEM Basics</name>
+    <description>NorthPoint Digital AEM Basic Components And Workflows</description>
 
     <prerequisites>
         <maven>3.0.2</maven>
