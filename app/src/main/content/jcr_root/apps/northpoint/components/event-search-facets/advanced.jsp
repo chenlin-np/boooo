@@ -25,8 +25,8 @@
 
     Set <String> regions = new HashSet<String>();
     SearchResultsInfo srchResults = (SearchResultsInfo)request.getAttribute("eventresults");
-    List<String> sresults = srchResults.getResults();
-    List<String> setOfRegions = srchResults.getRegion();
+	List<String> sresults = srchResults==null? new ArrayList<String>() : srchResults.getResults();
+    List<String> setOfRegions = srchResults==null? new ArrayList<String>() :srchResults.getRegion();
     for(String result: sresults){
         Node node =  resourceResolver.getResource(result).adaptTo(Node.class);
         try{
@@ -44,7 +44,7 @@
     facetsAndTags = (HashMap<String, List<FacetsInfo>>) request.getAttribute("facetsAndTags");
     String homepagePath = currentPage.getAbsoluteParent(2).getPath();
     //String REGIONS = currentSite.get("locationsPath", homepagePath + "/locations");
-    String YEARS = currentSite.get("eventPath", homepagePath + "/events");
+    String YEARS = currentSite.get("eventPath", String.class);
     long RESULTS_PER_PAGE = Long.parseLong(properties.get("resultsPerPage", "10"));
     String[] tags = request.getParameterValues("tags");
     HashSet<String> set = new HashSet<String>();
@@ -64,16 +64,20 @@
     }catch(Exception e){}
    
     ArrayList<String> years = new ArrayList<String>();
-    Iterator<Page> yrs= resourceResolver.getResource(YEARS).adaptTo(Page.class).listChildren();
+    Iterator<Page> yrs = null;
+	try{ 
+        yrs = resourceResolver.getResource(YEARS).adaptTo(Page.class).listChildren();
+   	}catch(Exception e){}
+
     String formAction = currentPage.getPath()+".advanced.html";
     if(properties.get("formaction", String.class)!=null && properties.get("formaction", String.class).length()>0){
         formAction = properties.get("formaction", String.class);
     }
-    while(yrs.hasNext()) {
+    while(yrs!=null && yrs.hasNext()) {
         years.add(yrs.next().getTitle());
     }
     SearchResultsInfo srchInfo = (SearchResultsInfo)request.getAttribute("eventresults");
-    List<String> results = srchInfo.getResults();
+	List<String> results = srchInfo==null? new ArrayList<String>():srchInfo.getResults();
     request.setAttribute("formAction", formAction);
     String m = request.getParameter("m"); 
     String eventSuffix = slingRequest.getRequestPathInfo().getSuffix();

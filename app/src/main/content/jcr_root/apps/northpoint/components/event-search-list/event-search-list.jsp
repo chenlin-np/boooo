@@ -28,10 +28,10 @@ if(null==srchInfo) {
 <%  
 }
 srchInfo =  (SearchResultsInfo)request.getAttribute("eventresults");
-List<String> results = srchInfo.getResults();
+List<String> results = srchInfo==null? new ArrayList<String>() :srchInfo.getResults();
 
 
-long hitCounts = srchInfo.getHitCounts();
+long hitCounts = srchInfo==null? 0:srchInfo.getHitCounts();
 SearchResult searchResults = (SearchResult)request.getAttribute("searchResults");
 String q = request.getParameter("q");
 

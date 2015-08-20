@@ -2,14 +2,13 @@
 <jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
     jcr:primaryType="cq:Page">
     <jcr:content
-        dialogPath="/apps/northpoint/wcm/scaffolding/dialogs/event/dialog"
-        cq:lastModified="{Date}2009-04-01T12:27:34.647+02:00"
+        cq:lastModified="{Date}2015-08-19T11:54:31.914-04:00"
         cq:lastModifiedBy="admin"
         cq:targetPath="/content/northpoint-prototype/en/events-repository"
         cq:targetTemplate="/apps/northpoint/templates/event-page"
-        jcr:description="s Events Scaffolding"
+        jcr:description="NP Basics Event Scaffolding"
         jcr:primaryType="cq:PageContent"
         jcr:title="Events"
-        sling:resourceType="northpoint/wcm/components/event-scaffolding">
-    </jcr:content>
+        sling:resourceType="/apps/northpoint/wcm/components/event-scaffolding"
+        dialogPath="/apps/northpoint/wcm/scaffolding/dialogs/event/dialog"/>
 </jcr:root>

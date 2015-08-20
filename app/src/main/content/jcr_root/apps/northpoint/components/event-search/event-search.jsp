@@ -1,4 +1,4 @@
-<%@ page import="com.day.cq.tagging.TagManager,
+<%@ page import="com.day.cq.wcm.api.WCMMode, com.day.cq.tagging.TagManager,
                 java.util.ArrayList,java.util.HashSet,
                 java.util.Locale,java.util.Map,java.util.Iterator,
                 java.util.HashMap,java.util.List,java.util.Set,
@@ -14,9 +14,13 @@
 <%
    
    long RESULTS_PER_PAGE = 10;
-   
+
    String path = currentSite.get("eventPath",String.class);
-  
+	if(path==null || path.isEmpty()){
+        if(WCMMode.fromRequest(request) == WCMMode.EDIT){
+		%> ### Please configure Event Path in home page properties ###<%
+        }
+   }else{        
    QueryBuilder queryBuilder = sling.getService(QueryBuilder.class);
    
    EventsSrch searchQuery = new EventsSrch(slingRequest,queryBuilder);
@@ -32,7 +36,7 @@
    String startdtRange = request.getParameter("startdtRange");
    String enddtRange = request.getParameter("enddtRange");
    String year=request.getParameter("year");
-  
+
    searchQuery.search(q,tags,offset,month,year,startdtRange,enddtRange,region,path,currentPage.getAbsoluteParent(1).getName());
    Map<String,List<FacetsInfo>> facetsAndTags =  searchQuery.getFacets();
    SearchResultsInfo searchResultsInfo = searchQuery.getSearchResultsInfo();
@@ -40,8 +44,9 @@
 
    List<String> results = searchResultsInfo.getResults();
    long hitCounts = searchResultsInfo.getHitCounts();
-   
+
    request.setAttribute("searchResults", searchResults);
    request.setAttribute("facetsAndTags", facetsAndTags);
    request.setAttribute("eventresults", searchQuery.getSearchResultsInfo());
+    }
 %>

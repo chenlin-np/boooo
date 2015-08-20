@@ -199,7 +199,7 @@
                     name="./jcr:content/data/srchdisp"/>
                 <color
                     jcr:primaryType="cq:Widget"
-                    fieldDescription="The color of the event in the calendar. e.g. #112233 red"
+                    fieldDescription="The color of the event in the calendar. e.g. #112233, red (Default: #C4E7FF)"
                     fieldLabel="Color"
                     name="./jcr:content/data/color"
                     xtyle="colorfield"/>
