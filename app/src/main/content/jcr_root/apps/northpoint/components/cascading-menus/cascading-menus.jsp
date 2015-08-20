@@ -72,7 +72,7 @@
 					/*** Below if eventLeftNavRoot is to handle a special case for events. Events is create at separate location
 					 ***  and when event is click event name need to be displayed in the left navigation
 					*/
-					if (eventLeftNavRoot!=null && page.getPath().indexOf(eventLeftNavRoot) == 0 && currPath.indexOf(eventDispUnder) == 0) {
+					if (eventLeftNavRoot!=null && page.getPath().indexOf(eventLeftNavRoot) == 0 && eventDispUnder!=null && currPath.indexOf(eventDispUnder) == 0) {
 						menuBuilder.append("<li class=\"active\">");
 						menuBuilder.append("<div>");
 						menuBuilder.append(createHref(page));
@@ -134,11 +134,11 @@ if(currentPage.getDepth()>3){
   boolean includeUL=false;
   String insertAfter="";
  if(eventGrandParent.equalsIgnoreCase(currentSite.get("eventPath", String.class))){
-	   if(eventLeftNavRoot!=null){
-     String eventPath = eventLeftNavRoot.substring(0,eventLeftNavRoot.lastIndexOf("/"));
-     iterPage = resourceResolver.getResource(eventPath).adaptTo(Page.class).listChildren();
+	 if(eventLeftNavRoot!=null){
+     	String eventPath = eventLeftNavRoot.substring(0,eventLeftNavRoot.lastIndexOf("/"));
+     	iterPage = resourceResolver.getResource(eventPath).adaptTo(Page.class).listChildren();
 	   }else{
-		   iterPage = null;
+		iterPage = null;
 	   }
  }
  buildMenu(iterPage, rootPath, language_path, menuBuilder, levelDepth,"",levelFlag,eventLeftNavRoot, curPath, curTitle, eventDisplUnder, showCurrent);
