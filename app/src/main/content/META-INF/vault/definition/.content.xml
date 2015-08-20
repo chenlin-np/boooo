@@ -3,7 +3,7 @@
 <jcr:root xmlns:vlt="http://www.day.com/jcr/vault/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
     jcr:created="{Date}2014-03-14T13:47:11.509-04:00"
     jcr:createdBy="admin"
-    jcr:description="GirlScouts USA App Package"
+    jcr:description="NorthPoint AEM App Package"
     jcr:lastModified="{Date}2014-03-14T13:47:11.509-04:00"
     jcr:lastModifiedBy="admin"
     jcr:primaryType="vlt:PackageDefinition"
@@ -14,7 +14,7 @@
     lastUnwrappedBy="admin"
     lastWrapped="{Date}2014-03-14T13:47:11.509-04:00"
     lastWrappedBy="admin"
-    name="northpoint-app"
+    name="northpoint-aem-app"
     version="0.1-SNAPSHOT">
     <thumbnail.png/>
     <filter jcr:primaryType="nt:unstructured">
